@@ -2,12 +2,17 @@ import React, { ReactNode } from "react";
 
 type Props = {
   children: ReactNode;
-  className: string;
+  classNameSvg?: string;
+  classNameContent?: string;
 };
 
-function HeroSvg({ className = "", children }: Props) {
+function HeroSvg({
+  classNameSvg = "",
+  classNameContent = "",
+  children,
+}: Props) {
   return (
-    <div className={`relative ${className}`}>
+    <div className={`relative ${classNameSvg}`}>
       <svg
         className="top-0 left-0 z-0 absolute w-full h-full"
         id="patternId"
@@ -52,7 +57,7 @@ function HeroSvg({ className = "", children }: Props) {
         />
       </svg>
 
-      <div className="relative z-10">{children}</div>
+      <div className={`relative z-10 ${classNameContent}`}>{children}</div>
     </div>
   );
 }
