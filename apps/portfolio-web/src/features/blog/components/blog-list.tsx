@@ -8,7 +8,9 @@ function BlogList({}: Props) {
   return (
     <div className="container">
       {BLOG_POSTS.map((post) => (
-        <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+        <Link key={post.slug} href={`/blog/${post.slug}`}>
+          {post.title}
+        </Link>
       ))}
     </div>
   );

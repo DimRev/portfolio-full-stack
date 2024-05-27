@@ -22,14 +22,14 @@ function NavBar({}: Props) {
         Home
       </Link>
       <Link
-        href="/portfolio"
+        href="/projects"
         className={cn(
           buttonVariants({ variant: "link" }),
-          pathname === "/portfolio" ? "text-primary underline" : "",
+          pathname === "/projects" ? "text-primary underline" : "",
           "transition-colors",
         )}
       >
-        Portfolio
+        Projects
       </Link>
       <Link
         href="/blog"
