@@ -26,6 +26,21 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ),
     em: ({ children }) => <em className="mb-2 text-base">{children}</em>,
     u: ({ children }) => <u className="mb-2 text-base">{children}</u>,
+    a: (props) => (
+      <a
+        className="mb-2 font-bold text-base text-blue-500 hover:text-blue-400 cursor-pointer"
+        target="_blank"
+        href={props.href}
+        rel="noopener noreferrer"
+      >
+        {props.children}
+      </a>
+    ),
+    ol: ({ children }) => (
+      <ol className="mb-4 ml-6 list-decimal">{children}</ol>
+    ),
+    ul: ({ children }) => <ul className="mb-4 ml-6 list-disc">{children}</ul>,
+    li: ({ children }) => <li className="mb-2">{children}</li>,
     ...components,
   };
 }
