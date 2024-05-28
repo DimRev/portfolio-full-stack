@@ -3,7 +3,7 @@ import AboutMeContent from "../features/home/components/about-me";
 
 export default function HomePage() {
   return (
-    <main className="flex-1">
+    <main className="min-h-[90dvh] flex-1">
       <HomeTitle />
       <AboutMeContent />
     </main>

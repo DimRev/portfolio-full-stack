@@ -5,7 +5,7 @@ type Props = {};
 
 function ContactPage({}: Props) {
   return (
-    <main className="flex-1">
+    <main className="min-h-[90dvh] flex-1">
       <ContactTitle />
     </main>
   );
