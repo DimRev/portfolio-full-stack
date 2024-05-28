@@ -1,5 +1,5 @@
 import type { MDXComponents } from "mdx/types";
-import HeroSvg from "~/features/assets/components/hero-svg";
+import HeroSvg from "~/features/shared/components/hero-svg";
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
@@ -13,39 +13,39 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </HeroSvg>
     ),
     h2: ({ children }) => (
-      <h2 className="mb-4 border-b-2 font-extrabold text-3xl tracking-wide container">
+      <h2 className="container mb-4 border-b-2 text-3xl font-extrabold tracking-wide">
         {children}
       </h2>
     ),
     h3: ({ children }) => (
-      <h3 className="mb-4 font-bold text-2xl tracking-wide container">
+      <h3 className="container mb-4 text-2xl font-bold tracking-wide">
         {children}
       </h3>
     ),
     h4: ({ children }) => (
-      <h4 className="mb-4 font-bold text-1xl tracking-wide container">
+      <h4 className="text-1xl container mb-4 font-bold tracking-wide">
         {children}
       </h4>
     ),
     h5: ({ children }) => (
-      <h5 className="mb-4 font-bold text-xl tracking-wide container">
+      <h5 className="container mb-4 text-xl font-bold tracking-wide">
         {children}
       </h5>
     ),
     h6: ({ children }) => (
-      <h6 className="mb-4 font-bold text-lg tracking-wide container">
+      <h6 className="container mb-4 text-lg font-bold tracking-wide">
         {children}
       </h6>
     ),
-    p: ({ children }) => <p className="mb-2 text-base container">{children}</p>,
+    p: ({ children }) => <p className="container mb-4 text-base">{children}</p>,
     strong: ({ children }) => (
       <strong className="mb-2 text-base">{children}</strong>
     ),
-    em: ({ children }) => <em className="mb-2 text-base">{children}</em>,
-    u: ({ children }) => <u className="mb-2 text-base">{children}</u>,
+    em: ({ children }) => <em className="text-base">{children}</em>,
+    u: ({ children }) => <u className="text-base">{children}</u>,
     a: (props) => (
       <a
-        className="mb-2 font-bold text-base text-blue-500 hover:text-blue-400 cursor-pointer"
+        className="mb-2 cursor-pointer text-base font-bold text-blue-500 hover:text-blue-400"
         target="_blank"
         href={props.href}
         rel="noopener noreferrer"
